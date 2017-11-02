@@ -8,7 +8,8 @@ export default class Home extends Component {
   render(){
     return (
       <div>Home page 
-        <img src="/assets/img/download.jpeg"/> 
+        <img src="/assets/img/download.jpeg"/>
+        {env.debug && <span>is debug mode {env.debug}</span>} 
       </div>
     )
   }

@@ -1,4 +1,6 @@
+require('dotenv').config();
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src') + '/index.js',
@@ -30,4 +32,11 @@ module.exports = {
       'Access-Control-Allow-Origin': '*'
     }
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      "env": {
+        "debug": JSON.parse(process.env.DEBUG)
+      }
+    })
+  ]
 };
