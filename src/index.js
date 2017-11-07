@@ -8,6 +8,9 @@ import thunkMiddleware from 'redux-thunk';
 import RouterComponent from './router';
 import reducers from './reducers';
 
+// Styles
+import './styles/index.sass'
+
 const createStoreWithMiddleware = applyMiddleware(
   thunkMiddleware
 )(createStore);
